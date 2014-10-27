@@ -38,7 +38,7 @@ $xml = str_replace("</request>", "<sign>{$sign}</sign></request>", $xml);
 
 // Запрос к сервису
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://paygate.dengionline.com/apiv2');
+curl_setopt($ch, CURLOPT_URL, "http://gsg.dengionline.com/api/{$projectId}/");
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('xml' => $xml)));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
